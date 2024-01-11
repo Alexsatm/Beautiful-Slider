@@ -25,11 +25,10 @@ document.addEventListener('keydown', event =>{
     }
 })
 
-function changeSlide(direction){
+function changeSlide(direction) {
     if (direction === 'up'){
-        activeSlideIndex++
-        if(activeSlideIndex === slidesCount)
-        {
+        activeSlideIndex++;
+        if(activeSlideIndex === slidesCount){
             activeSlideIndex = 0
         }
     } else if (direction === 'down'){
@@ -38,9 +37,9 @@ function changeSlide(direction){
             activeSlideIndex = slidesCount - 1
         }
     }
-    const height = container.clientHeight
+    const height = container.clientHeight;
 
-    mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`
+    mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`;
 
-    sideBar.style.transform = `translateY(${activeSlideIndex * height}px)`
+    sideBar.style.transform = `translateY(${activeSlideIndex * height}px)`;
 }
